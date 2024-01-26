@@ -6,7 +6,14 @@ import { isFavoritesPhoto } from '../../redux/photos/photosSlice'
 import { getPhotosSelector } from '../../redux/photos/selector'
 import { useState } from 'react'
 
-const Img = ({ photo, width, height, setIsOpen, url }: ImgProps) => {
+const Img = ({
+	photo,
+	width,
+	height,
+	setIsOpen,
+	url,
+	describe = true
+}: ImgProps) => {
 	const dispatch = useAppDispatch()
 	const { favoritesPhoto } = useAppSelector(getPhotosSelector)
 
@@ -49,8 +56,6 @@ const Img = ({ photo, width, height, setIsOpen, url }: ImgProps) => {
 			</>
 		)
 
-		
-
 	return (
 		<>
 			{photo && (
@@ -80,7 +85,7 @@ const Img = ({ photo, width, height, setIsOpen, url }: ImgProps) => {
 							alt={photo?.title}
 						/>
 					</div>
-					{showDescription && (
+					{describe && showDescription && (
 						<p
 							onMouseEnter={handleMouseEnter}
 							onMouseLeave={handleMouseLeave}

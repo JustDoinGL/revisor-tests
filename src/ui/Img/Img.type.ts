@@ -6,5 +6,6 @@ export type ImgProps = {
 	width: number
 	height: number
 	url?: string
+	describe?: boolean
 	setIsOpen?: ActionCreatorWithPayload<string, 'photos/openModal'>
 }

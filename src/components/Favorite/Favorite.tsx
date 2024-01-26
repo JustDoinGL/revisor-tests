@@ -2,9 +2,9 @@ import styles from './Favorite.module.css'
 import { ReactComponent as Illustration } from '../../assets/svg/illustration.svg'
 import { useAppSelector } from '../../hooks/redux'
 import { getPhotosSelector } from '../../redux/photos/selector'
-import Img from '../../ui/Img/Img'
-import Modal from '../../ui/Modal/Modal'
 import { closeModal, openModal } from '../../redux/photos/photosSlice'
+import Modal from '../../ui/Modal/Modal'
+import Img from '../../ui/Img/Img'
 
 export const Favorite = () => {
 	const { favoritesPhoto, isOpenModal, urlModal } =
@@ -35,9 +35,10 @@ export const Favorite = () => {
 					<Img
 						width={150}
 						height={150}
-						url={photo.url}
+						photo={photo}
 						key={photo.id}
 						setIsOpen={openModal}
+						describe={false}
 					/>
 					<p className={styles.paragraph}>{photo.title}</p>
 				</div>
