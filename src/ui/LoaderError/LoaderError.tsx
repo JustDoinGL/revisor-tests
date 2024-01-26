@@ -1,9 +1,8 @@
-import { Status } from '../../redux/@types/enum'
 import styles from './LoaderError.module.css'
 import { LoaderErrorProps } from './LoaderError.type'
 
 export const LoaderError = ({ status }: LoaderErrorProps) => {
-	if (status === Status.rejected)
+	if (status === 'rejected')
 		return (
 			<div className={styles.error}>
 				<div className={styles.icon}>❌</div>

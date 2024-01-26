@@ -6,9 +6,9 @@ import { getPhotosSelector } from '../../redux/photos/selector'
 import Img from '../../ui/Img/Img'
 import Modal from '../../ui/Modal/Modal'
 import { closeModal } from '../../redux/photos/photosSlice'
-import { User } from './User/User'
 import { LoaderError } from '../../ui/LoaderError/LoaderError'
 import { Status } from '../../redux/@types/enum'
+import { User } from './User/User'
 
 export const Accordion = () => {
 	const dispatch = useAppDispatch()
