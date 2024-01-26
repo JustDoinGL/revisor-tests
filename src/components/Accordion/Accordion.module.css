@@ -1,0 +1,45 @@
+.accordion {
+	padding: 24px 0;
+	position: relative;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	background-color: #ffffff;
+	border: 0;
+	font-family: Roboto;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%;
+	text-align: left;
+	cursor: pointer;
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+}
+
+.collapse {
+	transition: height 0.3s;
+	overflow: hidden;
+	height: 0;
+}
+
+.open {
+	height: auto;
+}
+
+.children__accordion {
+	margin-left: 56px;
+}
+
+.container__photo {
+	display: flex;
+	max-width: 790px;
+	margin: 0 auto;
+	margin-top: 56px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 42px;
+}

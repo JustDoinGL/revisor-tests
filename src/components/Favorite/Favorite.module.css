@@ -1,0 +1,44 @@
+.svg {
+	margin-bottom: 33px;
+}
+
+.title {
+	color: #1c1c1c;
+	font-family: Roboto;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
+}
+
+.paragraph {
+	color: #1c1c1c;
+	font-family: Roboto;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+}
+
+.container__photo {
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 42px;
+	max-width: 540px;
+}
+
+.photo {
+	gap: 12px;
+	max-width: 150px;
+}
+
+.paragraph {
+	color: #787878;
+	font-family: Roboto;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+}
