@@ -16,23 +16,27 @@ export const Album = ({ album }: AlbumProps) => {
 		<>
 			<AccordionItem title={album.title} id={album.albumId} fetch={fetchPhotos}>
 				<div className={styles.container__photo}>
-					{status === Status.fulfilled ? (
-						openPhotos.findIndex(el => el.id === album.albumId) !== -1 ? (
-							openPhotos[
+					{openPhotos.findIndex(el => el.id === album.albumId) !== -1
+						? openPhotos[
 								openPhotos.findIndex(el => el.id === album.albumId)
-							].content.map(photo => (
-								<Img
-									height={150}
-									width={150}
-									key={photo.id}
-									photo={photo}
-									setIsOpen={openModal}
-								/>
-							))
-						) : null
-					) : (
-						<LoaderError status={status as Status.pending | Status.rejected} />
-					)}
+							].content.map(photo =>
+								status === Status.fulfilled || status === Status.pending ? (
+									<Img
+										height={150}
+										width={150}
+										key={photo.id}
+										photo={photo}
+										setIsOpen={openModal}
+									/>
+								) : (
+									status === Status.rejected && (
+										<LoaderError
+											status={status as Status.pending | Status.rejected}
+										/>
+									)
+								)
+							)
+						: null}
 				</div>
 			</AccordionItem>
 		</>
