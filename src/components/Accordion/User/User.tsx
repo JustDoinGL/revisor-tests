@@ -19,7 +19,7 @@ export const User = ({ user }: UserProps) => {
 					<Album key={album.albumId} album={album} />
 				))
 			: status !== Status.fulfilled && <LoaderError status={status} />
-	}, [openAlbum, user.id])
+	}, [openAlbum, status, user.id])
 
 	return (
 		<>

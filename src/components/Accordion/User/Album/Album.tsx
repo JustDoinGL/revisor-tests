@@ -26,7 +26,7 @@ export const Album = ({ album }: AlbumProps) => {
           />
         ))
       : status !== Status.fulfilled && <LoaderError status={status} />
-  }, [openPhotos, album.albumId])
+  }, [openPhotos, status, album.albumId])
 
   return (
     <>
